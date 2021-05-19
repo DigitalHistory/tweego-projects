@@ -1,0 +1,178 @@
+:: StoryData
+{
+    "ifid": "F2277A49-95C9-4B14-AE66-62526089F861",
+    "format": "Harlowe",
+    "format-version": "3.2.1",
+    "start": "Start"
+}
+
+:: StoryTitle
+Locked Up and Locked down
+
+:: UserStylesheet [stylesheet]
+/* tw-story {
+/*     border: 5px solid lightgreen;
+/* }
+
+/* tw-sidebar {
+/*     border: 2px solid blue;
+/* }
+
+/* tw-passage {
+/*     border: 1px solid red;
+/* } */
+[tags="grey"] {
+    background: grey;
+}
+
+[tags="yellow"] {
+    background: yellow;
+    color: black;
+}
+tw-story[tags="web"] {
+background: linear-gradient(to bottom right, #614d51, rgb(232, 195, 203) 70%)
+}
+
+tw-story[tags="matrix"]{
+background: url("https://blog.zoombackground.io/media/posts/4/responsive/82abdc6c0818f80ada086fb1b912a62e-lg.jpg");
+}
+tw-passage[tags="matrix"]{
+background: black;
+}
+
+[tags="tan"] {
+background: rgb(214, 186, 120);
+}
+
+:: Start[grey]
+(set: $spiders_resolved to false)
+
+It's Spring, 2020. Matt is lying on the couch, staring fixedly at his phone. He's not really sure what he's looking at. That is, he can understand it, moreor less, but he has been looking for so long he has forgotten why he's doing it.  [[It's just a graph, just another graph of exponential growth|Bored]].
+
+:: Bored[grey]
+He turns away.  He looks at the [[ceiling|Ceiling]]. He looks at the [[floor|Floor]].  
+
+He wonders: what will become of his life? Will he ever move off of the couch?
+
+:: Ceiling[white]
+
+The paint is a sort of off-white. What do they call that colour? The shadows from the track lighting mark out spirals, thought decorative perhaps by theformer owners, but tacky and wearing. There are [[cobwebs|Spiders]] up there.  Maybe he should clean it.
+
+Not today.  He's so very bored.  
+
+:: Spiders
+(set: _display_anxiety to false)
+(set: _resolved to false)
+(set: $temp to false)
+(set: $anxious to true)
+
+
+He looks a little more closely at the cobwebs.  They form an intricate mesh, actually -- yes, they're covered with clumps of dust, but if you look at them long enough you can see that they are a fine mesh of interconnecting strands, with nodes at the cross points.
+
+They're a little hard to focus on. He wonders if something is wrong with his eyes.
+
+(link-reveal: "Could this be the plague?")[(replace: ?anx)[(show: ?anx)[(after: 3s)[(show: ?think)]]]]
+
+|anx)[(display:"Anxiety")]
+
+|think)[(link:"take a deep breath and try to to calm down.")
+       [(replace: ?anx)[
+
+(display:"Calm")(after: 4s)[(show: ?web)]]]]
+
+|web)[He looks a little closer.. Something is moving along the strands of web. [[There are... packets of... something|Networks]].]
+
+
+
+:: Anxiety
+
+
+Is that a rasping at the back of his throat? (link:"Are itchy eyes a symptom?")[(open-url: "https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html")]? Wait, (link:"should I trust the CDC")[(open-url: "https://www-ncbi-nlm-nih-gov.myaccess.library.utoronto.ca/books/NBK231971/")]? Maybe I should (link:"brush up on my basic virology")[(open-url:"https://www.sciencemag.org/collections/coronavirus")]. But... can I trust myself? What if I'm (link: "wrong about everything")[(open-url:"http://www.classicallibrary.org/descartes/meditations/4.htm")]?
+
+My heart is racing... (link:"is that a symptom too?")[(open-url: "https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html")]
+
+
+:: Calm
+
+
+<p></p>
+(text-style: "blur")[OK, OK.  Focussing.]  
+
+
+:: Networks[web]
+
+Good thing he has his magnifying glass. He stands up to look.
+
+There are flashes of light moving faster than he can really figure out.  He reaches up to see if he can [[touch one|In the Web]].
+
+:: In the Web[matrix]
+
+(after: 2s)[
+Whoa. He's overwhelmed with a new perspective. Sure, he can't go outside, and the world is filled with plague.  But, inside this web, there is immense complexity. Huge amounts of data are, apparently, moving back and forth through it. What would it (link:"take to understand it")[(open-url: "https://en.wikipedia.org/wiki/Network_theory")]? What (link: "skills would someone need to acquire")[(open-url: "https://developer.mozilla.org/")]? Hold on -- maybe (link:"those are the wrong skills actually")[(open-url:"https://programminghistorian.org/")]? 
+
+[[He looks closer|Literary Networks]]...
+]
+
+:: Literary Networks[web]
+
+The dates of every letter any 19th-century author ever wrote.
+
+The name and age of every person transported across the Atlantic as a slave.
+
+Every medical term used in Ibn Sina's //Book of Healing//.
+
+What kind of questions might we learn to answer?
+
+[[He thinks it over]]...
+
+
+:: He thinks it over
+
+(link: "Should we keep learning?")[(open-url:"https://q.utoronto.ca/courses/219069")]?
+
+or
+
+[[just sink back into the couch|Bored]]?
+
+You decide!!
+
+
+:: Floor[tan]
+
+The floor is boring too.
+
+(after: 2s)[Wait, what's that?
+
+(after: time + 3s)[Ah right.  There's a book on the floor under the couch.
+
+He picks it up.
+
+(after: time + 1s)[[[When was the last time he read a book?|Book]] Can he still focus enough to read?]
+]]
+
+
+:: Book
+
+Ah, now I remember. This is what reading feels like.  
+
+(after: 2s)[Falling right into the world of the book.  Thinking with the author. Understanding the author's world, and understanding yourself.
+
+(after: time + 2s)[But... (link: "what is understanding")[(open-url:"https://plato.stanford.edu/entries/hermeneutics/#ContHerm_1")], exactly? What is purpose of reading? Why do we (link: "pay people to read")[(open-url:"https://quillette.com/2020/07/14/in-defence-of-the-humanities/")]?
+
+(after: time + 1s)[Right, right, those are interesting questions. But hold on a second, [[this book is really interesting.|Inside the Book]]]
+]]
+
+
+:: Inside the Book
+
+
+You know what would be really helpful, though?  A guide that I could follow as I read, that would help me with the hard parts.  Or a community I could talk to about my book.  Or... a game that recreated the places in the book! A concordance that listed all the important concepts and where htey were discussedin the book.
+
+The main thing is, how can I understand this book? What do I want to learn from it? Who do I want to be when I'm done reading?
+
+(after: 3s) [Wow though.  That was (after: time + 3s)[so (text-style: "smear", "bold")[tiring].
+
+(after: time + 1s)[[[I'm just going to rest a bit|He thinks it over]]
+]]]
+
+

@@ -1,0 +1,49 @@
+:: StoryTitle
+You
+
+
+:: StoryData
+{
+	"ifid": "2B9FF5B4-16E3-4F33-A635-2BA7E74773CF",
+	"format": "Harlowe",
+	"format-version": "3.2.1",
+	"start": "Start",
+	"zoom": 1
+}
+
+
+:: Start {"position":"385,322.5","size":"100,100"}
+[[You]]
+
+
+:: You {"position":"673,312.5","size":"100,100"}
+You feel [[nothing]]
+
+
+:: nothing {"position":"1002,234.5","size":"100,100"}
+Which is an odd thought
+(click-replace: "thought")[thought
+([[you->You]] [[think]]?)]
+why would [[you->You]] feel [[something]]?
+
+
+:: think {"position":"931,492.5","size":"100,100"}
+[[You]] do think, [[you->You]] know that this is thought (click: "know")[(but [[you->You]] aren't sure how)]
+(click: "know")[It isn't the only thing [[you->You]] know either]
+
+(click: "know")[[[You]] know [[you->You]] know other things, but [[you->You]] don't know what they are]
+
+(click-goto: "know", "know")
+
+
+:: something {"position":"1249,439.5","size":"100,100"}
+[[You]] haven't felt anything before, [[you->You]] don't [[think]] [[you->You]] would know what it's like
+
+
+:: know {"position":"1057,560.5","size":"100,100"}
+[[You]]
+ can feel them there, but [[you->You]] can't touch them, 
+[[you->You]] can't see them, [[you->You]] don't know what to know 
+about
+
+
